@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nosweet1</title>
+<meta name="description" content="Nosweet1 — AI engineering, automation, dev tools.">
+<style>
+  :root{
+    --bg:#0b0e14;
+    --card:rgba(18,23,31,.92);
+    --border:#232b36;
+    --text:#e6edf3;
+    --muted:#8b949e;
+    --accent:#58a6ff;
+    --accent2:#3fb950;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100vh;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;overflow-x:hidden;position:relative;
+  }
+  body::before{
+    content:"";position:fixed;top:-35%;left:50%;transform:translateX(-50%);
+    width:900px;height:620px;pointer-events:none;
+    background:radial-gradient(circle,rgba(88,166,255,.14),transparent 65%);
+  }
+  body::after{
+    content:"";position:fixed;bottom:-40%;right:-10%;
+    width:700px;height:520px;pointer-events:none;
+    background:radial-gradient(circle,rgba(63,185,80,.07),transparent 65%);
+  }
+  .card{
+    position:relative;width:100%;max-width:520px;
+    background:var(--card);
+    border:1px solid var(--border);border-radius:18px;
+    padding:40px 32px 30px;text-align:center;
+    backdrop-filter:blur(10px);
+    box-shadow:0 20px 60px -20px rgba(0,0,0,.8);
+    animation:in .7s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .avatar{
+    width:96px;height:96px;border-radius:50%;object-fit:cover;
+    border:2px solid var(--border);
+    box-shadow:0 0 0 6px rgba(88,166,255,.08);
+    margin-bottom:18px;background:#161b22;
+  }
+  h1{font-size:26px;letter-spacing:.4px;margin-bottom:6px;font-weight:650}
+  .handle{
+    color:var(--accent);font-size:13.5px;
+    font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+  }
+  .bio{color:var(--muted);font-size:15px;line-height:1.75;margin:20px 0 24px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
+  .tag{
+    font-size:12px;padding:5px 12px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted);
+    background:rgba(255,255,255,.02);
+  }
+  .links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 20px;border-radius:10px;font-size:14px;
+    text-decoration:none;transition:all .2s ease;
+    border:1px solid var(--border);
+    color:var(--text);background:rgba(255,255,255,.03);
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#0b0e14;font-weight:600}
+  .btn.primary:hover{filter:brightness(1.08);color:#0b0e14}
+  footer{
+    margin-top:30px;padding-top:18px;border-top:1px solid rgba(35,43,54,.6);
+    font-size:12px;color:#4d5866;
+    font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+  }
+  .dot{
+    display:inline-block;width:6px;height:6px;border-radius:50%;
+    background:var(--accent2);margin-right:6px;vertical-align:middle;
+  }
+  @media(max-width:480px){
+    .card{padding:32px 20px 26px}
+    h1{font-size:22px}
+    .bio{font-size:14px}
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <img class="avatar" src="https://github.com/Nosweet1.png" alt="Nosweet1"
+         onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 96 96%22><rect width=%2296%22 height=%2296%22 fill=%22%23161b22%22/><text x=%2248%22 y=%2260%22 font-size=%2240%22 fill=%22%2358a6ff%22 text-anchor=%22middle%22 font-family=%22monospace%22>N</text></svg>'">
+    <h1>Nosweet1</h1>
+    <div class="handle">github.com/Nosweet1</div>
+    <p class="bio">
+      在构建一些东西。<br>
+      AI 应用 · 自动化 · 开发工具
+    </p>
+    <div class="tags">
+      <span class="tag">Claude Code</span>
+      <span class="tag">AI Engineering</span>
+      <span class="tag">Automation</span>
+      <span class="tag">Web Dev</span>
+    </div>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/Nosweet1" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://github.com/Nosweet1?tab=repositories" target="_blank" rel="noopener">Repositories</a>
+    </div>
+    <footer><span class="dot"></span>Nosweet1.github.io</footer>
+  </main>
+</body>
+</html>
